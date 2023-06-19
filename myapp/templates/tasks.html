@@ -1,0 +1,22 @@
+<h1>Tasks</h1>
+
+<select name="" id="">
+  {% for task in tasks %}
+    <option value={{task.id}}>{{task.title}}
+      / <p>Project:{{task.project.id}}</p>
+    </option>
+  {% endfor %}
+
+
+</select>
+    {% if task.done == False and task.id == 1 %}
+    <p>Tarea pendiente</p>
+    {% else %}
+    <p>Tarea realizada</p>
+    {% endif %}
+
+
+
+<button>Eliminar</button>
+<button>✅ Realizada</button><br>
+
