@@ -1,0 +1,27 @@
+<!-- Se indica de donde se va a extender esta vista o recargar -->
+{% extends 'layouts/base.html' %}
+
+<!-- Añadimos un bloque que contendra la vista heredada -->
+{% block content %}
+<h1>Tasks</h1>
+
+  <!-- Bucle for para recorrer la lista registradas de las tareas -->
+  {% for task in tasks %}
+
+  <div>
+    <h1>{{task.title}} {% if task.done == False %} ❌ {% else %} ✅ {% endif %} </h1>
+    <p>Descripcion : {{task.description}}</p>
+    <p>Projecto: {{task.project.name}}</p>
+    <button>Eliminar</button>
+    <button>✅ Realizada</button><br>
+  </div>
+
+  {% endfor %}
+
+  {% endblock %} 
+
+
+
+
+
+

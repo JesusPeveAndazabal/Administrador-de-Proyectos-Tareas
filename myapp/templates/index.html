@@ -1,2 +1,10 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content%}
 <h1>{{title}}</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ab eum ullam dignissimos totam fuga id temporibus inventore ea. Modi perferendis aut, culpa earum quibusdam rerum provident labore quo sunt!</p>
+
+<img src="{% static 'pc.png' %}" alt="" width="100">
+
+<p>Django es un software que puede utilizar para desarrollar aplicaciones web de forma rápida y eficiente. La mayoría de las aplicaciones web tienen varias funciones comunes, como la autenticación, la recuperación de información de una base de datos y la administración de cookies.</p>
+{% endblock %}
